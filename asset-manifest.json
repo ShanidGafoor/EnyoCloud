@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EnyoCloud/static/css/main.203888c4.css",
+    "main.js": "/EnyoCloud/static/js/main.a38d5c1e.js",
+    "static/js/453.abef49f1.chunk.js": "/EnyoCloud/static/js/453.abef49f1.chunk.js",
+    "index.html": "/EnyoCloud/index.html",
+    "main.203888c4.css.map": "/EnyoCloud/static/css/main.203888c4.css.map",
+    "main.a38d5c1e.js.map": "/EnyoCloud/static/js/main.a38d5c1e.js.map",
+    "453.abef49f1.chunk.js.map": "/EnyoCloud/static/js/453.abef49f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.203888c4.css",
+    "static/js/main.a38d5c1e.js"
+  ]
+}
