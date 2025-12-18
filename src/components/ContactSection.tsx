@@ -25,14 +25,31 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    formData.append("access_key", "1a5346c9-08e4-414f-b065-42655dca9dcf");
 
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+    }
+    else {
+      toast({
+        title: "Error submitting Form!",
+        description: "Please send an email to Sales@enyocloud.com",
+      });
+    }
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
+
 
     setFormData({ name: '', email: '', company: '', message: '' });
     setIsSubmitting(false);
